@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Aira's Little Corner ♡</title>
+ <style>
+ * {
+ box-sizing: border-box;
+ scroll-behavior: smooth;
+ }
+ body {
+ margin: 0;
+ background: #faf5ef;
+ color: #332c2a;
+ font-family: Arial, sans-serif;
+ }
+ /* ================= HEADER ================= */
+ header {
+ height: 70px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0 7%;
+ background: #f9eee8;
+ border-bottom: 1px solid #e2d5ce;
+ position: sticky;
+ top: 0;
+ z-index: 10;
+ }
+ .logo {
+ font-family: cursive;
+ font-size: 28px;
+ }
+ nav a {
+ text-decoration: none;
+ color: #332c2a;
+ margin-left: 25px;
+ font-size: 14px;
+ }
+ nav a:hover {
+ color: #c98f8f;
+ }
+ /* ================= GENERAL ================= */
+ section {
+ padding: 75px 8%;
+ }
+ /* ================= HOME ================= */
+ #home {
+ min-height: 650px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 55px;
+ background: #fcf8f4;
+ }
+ .home-text {
+ width: 55%;
+ }
+ .home-text h1 {
+ font-family: cursive;
+ font-weight: normal;
+ font-size: 62px;
+ line-height: 1.15;
+ margin: 0 0 22px;
+ }
+ .underline {
+ width: 430px;
+ height: 11px;
+ background: #efd0ca;
+ border-radius: 50%;
+ margin-bottom: 40px;
+ }
+ .home-text p {
+ font-size: 20px;
+ line-height: 1.8;
+ max-width: 780px;
+ }
+ .quote {
+ margin-top: 28px;
+ font-size: 18px;
+ }
+ /* HOME PHOTO
+ ONLY BOOK + COFFEE + FLOWERS
+ */
+ .home-photo {
+ width: 42%;
+ display: flex;
+ justify-content: center;
+ }
+ .home-photo img {
+ width: 100%;
+ height: 390px;
+ object-fit: cover;
+ border-radius: 8px;
+ box-shadow:
+ 0 12px 30px rgba(80,55,45,.15);
+ }
+ /* ================= SECTION TITLES ================= */
+ .title {
+ font-family: cursive;
+ font-size: 45px;
+ font-weight: normal;
+ margin: 0 0 30px;
+ }
+ .title:after {
+ content: "";
+ display: block;
+ width: 180px;
+ height: 8px;
+ background: #efd0ca;
+ border-radius: 50%;
+ margin-top: 5px;
+ }
+ /* ================= ABOUT ME ================= */
+ #about {
+ background: #f8e9e4;
+ }
+ .about-content {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 60px;
+ }
+ .about-text {
+ width: 55%;
+ font-size: 18px;
+ line-height: 1.8;
+ }
+ .about-photo {
+ width: 40%;
+ text-align: center;
+ }
+ .about-photo img {
+ width: 330px;
+ max-width: 100%;
+ border: 10px solid white;
+ box-shadow:
+ 0 10px 25px rgba(70,50,40,.15);
+ transform: rotate(2deg);
+ display: block;
+ margin: auto;
+ }
+ /* ================= MY INTERESTS ================= */
+ #interests {
+ background: #fcf8f4;
+ }
+ .interest-content {
+ display: flex;
+ gap: 50px;
+ align-items: center;
+ }
+ .interest-photos {
+ width: 58%;
+ }
+ .interest-photos img {
+ width: 100%;
+ height: 270px;
+ object-fit: cover;
+ border: 8px solid white;
+ box-shadow:
+ 0 5px 15px rgba(70,50,40,.12);
+ margin-bottom: 15px;
+ }
+ .interest-list {
+ width: 42%;
+ font-size: 18px;
+ line-height: 2.15;
+ }
+ /* ================= COLLEGE LIFE ================= */
+ #college {
+ background: #f8e9e4;
+ }
+ .college-content {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 60px;
+ }
+ .college-text {
+ width: 50%;
+ font-size: 18px;
+ line-height: 1.8;
+ }
+ .college-photo {
+ width: 48%;
+ }
+ .college-photo img {
+ width: 100%;
+ border: 10px solid white;
+ box-shadow:
+ 0 10px 25px rgba(70,50,40,.15);
+ transform: rotate(-2deg);
+ display: block;
+ }
+ /* ================= FAVORITES ================= */
+ #favorites {
+ background: #fcf8f4;
+ }
+ .favorites-content {
+ display: flex;
+ align-items: center;
+ gap: 60px;
+ }
+ .favorite-photos {
+ width: 45%;
+ }
+ .favorite-photos img {
+ width: 100%;
+ height: 270px;
+ object-fit: cover;
+ border: 8px solid white;
+ box-shadow:
+ 0 5px 15px rgba(70,50,40,.12);
+ margin-bottom: 15px;
+ }
+ .favorite-list {
+ width: 55%;
+ font-size: 18px;
+ line-height: 2;
+ }
+ /* ================= GOALS ================= */
+ #goals {
+ background: #f8e9e4;
+ }
+ .goals-content {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 60px;
+ }
+ .goals-text {
+ width: 50%;
+ font-size: 18px;
+ line-height: 1.8;
+ }
+ .goals-photo {
+ width: 48%;
+ }
+ .goals-photo img {
+ width: 100%;
+ border: 10px solid white;
+ box-shadow:
+ 0 10px 25px rgba(70,50,40,.15);
+ display: block;
+ }
+ /* ================= FOOTER ================= */
+ footer {
+ text-align: center;
+ padding: 35px;
+ background: #e9c9c1;
+ font-size: 15px;
+ }
+ /* ================= MOBILE ================= */
+ @media(max-width:800px) {
+ header {
+ height: auto;
+ padding: 18px;
+ flex-direction: column;
+ gap: 12px;
+ }
+ nav {
+ text-align: center;
+ }
+ nav a {
+ margin: 5px;
+ display: inline-block;
+ }
+ #home,
+ .about-content,
+ .interest-content,
+ .college-content,
+ .favorites-content,
+ .goals-content {
+ flex-direction: column;
+ }
+ .home-text,
+ .home-photo,
+ .about-text,
+ .about-photo,
+ .interest-photos,
+ .interest-list,
+ .college-text,
+ .college-photo,
+ .favorite-photos,
+ .favorite-list,
+ .goals-text,
+ .goals-photo {
+ width: 100%;
+ }
+ .home-text h1 {
+ font-size: 45px;
+ }
+ .underline {
+ width: 250px;
+ }
+ .home-photo img {
+ height: 300px;
+ }
+ }
+ </style>
+</head>
+<body>
+<!-- ================= HEADER ================= -->
+<header>
+ <div class="logo">
+ Aira's Little Corner ♡
+ </div>
+ <nav>
+ <a href="#home">Home</a>
+ <a href="#about">About Me</a>
+ <a href="#interests">Interests</a>
+ <a href="#college">College Life</a>
+ <a href="#favorites">Favorites</a>
+ <a href="#goals">Goals</a>
+ </nav>
+</header>
+<!-- ================= HOME ================= -->
+<section id="home">
+ <div class="home-text">
+ <h1>
+ Welcome to My<br>
+ Little Corner! ♡
+ </h1>
+ <div class="underline"></div>
+ <p>
+ Hi! I'm Aira, a college student who loves simple moments,
+ learning new things, and creating memories. This blog is a
+ small space where I can share a little part of my life.
+ </p>
+ <div class="quote">
+ ♡ Good things take time.
+ </div>
+ </div>
+ <!-- ONLY BOOK + COFFEE + FLOWERS -->
+ <div class="home-photo">
+ <img
+ src="home_photo.jpg"
+ alt="Book, cup of coffee and flowers"
+ >
+ </div>
+</section>
+<!-- ================= ABOUT ME ================= -->
+<section id="about">
+ <div class="about-content">
+ <div class="about-text">
+ <h2 class="title">
+ About Me ♡
+ </h2>
+ <p>
+ <strong>Hello, I'm Aira!</strong>
+ </p>
+ <p>
+ I'm a college student taking up Office Administration.
+ I enjoy spending time with people I love, listening to music,
+ learning new skills, and appreciating the little things in life.
+ </p>
+ <p>
+ I may not have everything figured out yet,
+ but I'm happy with how far I've come.
+ </p>
+ </div>
+ <!-- YOUR ORIGINAL PHOTO -->
+ <div class="about-photo">
+ <img
+ src="my-original-photo.jpg"
+ alt="Aira"
+ >
+ </div>
+ </div>
+</section>
+<!-- ================= MY INTERESTS ================= -->
+<section id="interests">
+ <div class="interest-content">
+ <div class="interest-photos">
+ <img
+ src="interest_html.jpg"
+ alt="HTML and technology"
+ >
+ <img
+ src="interest_books.jpg"
+ alt="Books and studying"
+ >
+ <img
+ src="interest_music.jpg"
+ alt="Music"
+ >
+ <img
+ src="interest_coffee_camera.jpg"
+ alt="Coffee and photography"
+ >
+ </div>
+ <div class="interest-list">
+ <h2 class="title">
+ My Interests ♡
+ </h2>
+ ♡ Technology & HTML
+ <br>
+ ♡ Studying and learning
+ <br>
+ ♡ Listening to music
+ <br>
+ ♡ Cafés and coffee
+ <br>
+ ♡ Taking photos
+ <br>
+ ♡ Spending time with family and friends
+ <br>
+ ♡ Creating memories
+ </div>
+ </div>
+</section>
+<!-- ================= COLLEGE LIFE ================= -->
+<section id="college">
+ <div class="college-content">
+ <div class="college-text">
+ <h2 class="title">
+ My College Life ♡
+ </h2>
+ <p>
+ College has taught me to become more responsible
+ and independent. There are stressful days, but there
+ are also many happy moments that I will always remember.
+ </p>
+ <p>
+ Every experience gives me a chance to learn, grow,
+ and become a better version of myself.
+ </p>
+ </div>
+ <!-- YOUR PATEROS TECHNOLOGICAL COLLEGE PHOTO -->
+ <div class="college-photo">
+ <img
+ src="pateros-technological-college.jpg"
+ alt="Pateros Technological College"
+ >
+ </div>
+ </div>
+</section>
+<!-- ================= FAVORITES ================= -->
+<section id="favorites">
+ <div class="favorites-content">
+ <div class="favorite-photos">
+ <img
+ src="favorite-coffee.jpg"
+ alt="Coffee"
+ >
+ <img
+ src="favorite-pasta.jpg"
+ alt="Pasta"
+ >
+ <img
+ src="favorite-camera.jpg"
+ alt="Camera"
+ >
+ <img
+ src="favorite-peaceful-place.jpg"
+ alt="Peaceful place"
+ >
+ </div>
+ <div class="favorite-list">
+ <h2 class="title">
+ My Favorites ♡
+ </h2>
+ ♡ Favorite Color: Black & White
+ <br>
+ ♡ Favorite Food: Pasta
+ <br>
+ ♡ Favorite Drink: Coffee
+ <br>
+ ♡ Favorite Hobby: Listening to Music
+ <br>
+ ♡ Favorite Place: Peaceful Places
+ <br>
+ ♡ Favorite Quote:
+ “Enjoy the little things in life.”
+ </div>
+ </div>
+</section>
+<!-- ================= GOALS ================= -->
+<section id="goals">
+ <div class="goals-content">
+ <div class="goals-text">
+ <h2 class="title">
+ My Goals ♡
+ </h2>
+ <p>
+ I want to finish my studies, improve my skills,
+ build a good career, and become a better version
+ of myself.
+ </p>
+ <p>
+ I also want to experience new places, meet new people,
+ and create more meaningful memories.
+ </p>
+ <p>
+ <strong>
+ Big dreams, small steps. ♡
+ </strong>
+ </p>
+ </div>
+ <!-- DIPLOMA + GRADUATION TOGA -->
+ <div class="goals-photo">
+ <img
+ src="goals_photo.jpg"
+ alt="Diploma and graduation toga"
+ >
+ </div>
+ </div>
+</section>
+<!-- ================= FOOTER ================= -->
+<footer>
+ ♡ Thank you for visiting Aira's Little Corner! ♡
+ <br><br>
+ Made with love and a little bit of HTML.
+</footer>
+</body>
+</html>
